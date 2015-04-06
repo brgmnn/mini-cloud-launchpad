@@ -16,6 +16,7 @@ $(document).ready(function() {
             $.get("api/terminate", function(data) {
                 $("#launch").removeClass("disabled").html("Launch Wordpress");
                 launched = false;
+                running = false;
             })
         }
     });
@@ -28,6 +29,7 @@ $(document).ready(function() {
                 setTimeout(poll_status, 5000);
             });
         } else {
+            $("#status").html("");
             setTimeout(poll_status, 5000);
         }
     }
@@ -41,7 +43,8 @@ $(document).ready(function() {
                 setTimeout(poll_url, 5000);
             });
         } else {
-             setTimeout(poll_url, 5000);
+            $("#url").attr("href", "#").text("");
+            setTimeout(poll_url, 5000);
         }
     }
 
