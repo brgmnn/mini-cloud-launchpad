@@ -82,6 +82,7 @@ def logout():
     return redirect(url_for("index"))
 
 
+# Just for flask to encode session cookies.
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 if __name__ == "__main__":
