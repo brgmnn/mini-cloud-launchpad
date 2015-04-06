@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/launchpad.css') }}">
+    <script src="{{ url_for('static', filename='js/mithril.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-1.11.2.min.js')}}"></script>
+
+
+    <title>Launchpad</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cloud Launchpad</h1>
+
+      <p>
+        <span id="launch" class="btn">Launch Wordpress</span>
+        <a class="btn" href="/logout">Log Out</a>
+      </p>
+
+      <p>
+        <b>Status:</b> <span id="status"></span>
+      <p>
+
+      <p>
+        <b>URL:</b> <a id="url" target="_blank" href=""></a>
+      <p>
+
+      <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-app.js')}}"></script>
+    </div>
+  </body>
+</html>
